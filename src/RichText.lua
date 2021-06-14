@@ -7,9 +7,9 @@ local function createTag(tag: string)
 end
 
 
-function RichText.new(startText: string)
+function RichText.new(initialText: string)
 	return setmetatable({
-		Text = startText or ''
+		Text = initialText or ''
 	}, RichText)
 end
 
@@ -61,7 +61,7 @@ function RichText:Break(target: string)
 	assert(not target or type(target) == 'string')
 
 	if (target) then
-		self:InsertAfter('<br />', target)
+		self:InsertAfter(target, '<br />')
 	else
 		self.Text ..= '<br />'
 	end
@@ -132,10 +132,10 @@ function RichText:Join(join: string | table)
 
 end
 
-function RichText:InsertAfter(text: string, after: string)
-	assert(type(text) == 'string' and type(after) == 'string')
+function RichText:InsertAfter(target: string, text: string)
+	assert(type(target) == 'string' and type(text) == 'string')
 
-	local _, finish = self.Text:find(after)
+	local _, finish = self.Text:find(target)
 
 	if (finish) then
 		self.Text = self.Text:sub(1, finish) .. text .. self.Text:sub(finish + 1)
