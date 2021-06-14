@@ -48,6 +48,7 @@ text:Bold('Flying') -- <b>Flying</b> high like the birds and the bees.
 ```
 
 **Result:**
+<br>
 ![alt Multiple Styles](/img/1.png)
 
 <br>
@@ -76,6 +77,7 @@ text:Font(Enum.Font.GothamBold, 'walk') -- I <font color="rgb(128, 20, 223)">sho
 ```
 
 **Result:**
+<br>
 ![alt Color-Size-Font](/img/2.png)
 
 <br>
@@ -150,7 +152,7 @@ local text = RichText.new(
 ```
 
 **Result:**
-
+<br>
 ![alt final](img/final.png)
 
 ```<font face="GothamBold">Hello, <b><font color="rgb(47,75,255)"><font size="20">Gaffal</font></font></b>! You are playing the game for the <u>12</u>th time. <b><font face="Cartoon"><font color="rgb(255,211,35)">Bob</font></font></b>, you pet, is waiting for you at <i>Home</i>. <font color="rgb(255,61,64)">Don't be late!</font></font>```
