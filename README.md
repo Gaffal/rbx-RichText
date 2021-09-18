@@ -61,9 +61,7 @@ text:Bold('Flying') -- <b>Flying</b> high like the birds and the bees.
 
 
 RichText:ColorRGB(r: number, g: number, b: number, target: string | nil) || RichText:ColorRGB(Color3.fromRGB(r, g, b), target: string | nil)
-
 RichText:Size(fontSize: number, target: string | nil)
-
 RichText:Font(font: Enum.Font | string, target: string | nil)
 ```
 
@@ -84,9 +82,9 @@ text:Font(Enum.Font.GothamBold, 'walk') -- I <font color="rgb(128, 20, 223)">sho
 
 # Format
 
-This is only useful when `string.find` turns into a mess.
+This is only useful when `string.format` turns into a mess.
 
-Wrap your replacement with `${x}`, almost like template strings in JavaScript.
+Wrap your replacement with `${x}`, pretty much like template strings in JavaScript.
 
 ```lua
 local text = RichText.new()
@@ -169,7 +167,6 @@ local PlayerData = {
 }
 
 local text = ([[<font face="GothamBold">Hello, <b><font color="rgb(47,75,255)"><font size="20">%s</font></font></b>! You are playing the game for the <u>%s</u>th time. <b><font face="Cartoon"><font color="rgb(255,211,35)">%s</font></font></b>, you pet, is waiting for you at <i>%s</i>. <font color="rgb(255,61,64)">Don't be late!</font></font>]])
-
 :format(PlayerData.playerName, PlayerData.logins, PlayerData.petName, PlayerData.petLocation)
 
 -- (complete mess)
