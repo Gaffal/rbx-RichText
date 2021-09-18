@@ -1,6 +1,6 @@
 # RichText
 
-I've made this for personal use, but here is how to use it.
+I've made this for personal use, but here is the basic usage.
 
 This module helps to keep RichText organized.
 
